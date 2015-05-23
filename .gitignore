@@ -1,4 +1,4 @@
-bower_components/**/*.*
-node_modules/**/*.*
+bower_components/
+node_modules/
 my.sh
-app/css/bourbon/**/*.*
+app/css/bourbon/
