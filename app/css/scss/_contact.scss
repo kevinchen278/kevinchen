@@ -1,0 +1,146 @@
+.section-contact{
+  text-align: center;
+  height: 330px;
+  width: 100%;
+  background-color: $bgcolor;
+  #contact {
+    padding-top: 40px;
+
+  }
+}
+
+.social-links{
+  max-width: 800px;
+  height: 60px;
+  margin: 10px auto 50px;
+  @include display(flex);
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  
+  a {
+    @include size(80px);
+    // background-color: red;
+    display: block;
+    background: $accent;
+    border: 2px solid $accent;
+    line-height: 4;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    margin: 10px;
+    position: relative;
+    
+    
+    &:after {
+      content: '';
+      display: block;
+      @include position(absolute, 0px 0px 0px 0px);
+      border: 2px solid $accent;
+      border-radius: 50%;
+      margin: -2px;
+      opacity: 1;
+      @include transition();
+    }
+    
+    &:hover:after{
+      @include transform(scale(1.5));
+      opacity: 0;
+      }
+    }
+}
+
+.bar{
+  margin: 30px auto 20px;
+  width: 700px;
+  height: 0px;
+  border-top: 4px solid $accent;
+}
+
+.emailLink, .phoneLink {
+  color: $accent;
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 500;
+  width: 90%;
+  margin: 0 auto;
+  text-decoration: none;
+
+}
+
+
+
+@media screen and (max-width: 600px){
+
+    .section-contact{
+      height: 220px;
+      width: 100%;
+      background-color: $bgcolor;
+      #contact {
+        padding-top: 20px;
+
+      }
+    }
+
+    .social-links{
+      max-width: 800px;
+      height: 60px;
+      margin: 10px auto 10px;
+      @include display(flex);
+      @include justify-content(space-around);
+      @include flex-wrap(wrap);
+      
+      a {
+        @include size(50px);
+        // background-color: red;
+        display: block;
+        background: $accent;
+        border: 2px solid $accent;
+        line-height: 4;
+        color: white;
+        border-radius: 50%;
+        font-size: 16px;
+        margin: 10px;
+        position: relative;
+        
+        
+        &:after {
+          content: '';
+          display: block;
+          @include position(absolute, 0px 0px 0px 0px);
+          border: 2px solid $accent;
+          border-radius: 50%;
+          margin: -2px;
+          opacity: 1;
+          @include transition();
+        }
+        
+        &:hover:after{
+          @include transform(scale(1.5));
+          opacity: 0;
+          }
+        }
+    }
+
+    .bar{
+      margin: 30px auto 20px;
+      width: 200px;
+      height: 0px;
+      border-top: 4px solid $accent;
+    }
+
+    .emailLink, .phoneLink{
+      color: $accent;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      width: 90%;
+      margin: 0 auto;
+      text-decoration: none;
+
+    }
+
+
+}
+
+
+

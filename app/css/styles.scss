@@ -1,0 +1,26 @@
+$fa-font-path: "fonts/font-awesome/";
+
+@import 'scss/font';
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'font-awesome';
+@import 'scss/variables';
+@import 'scss/placeholders';
+@import 'scss/header';
+@import 'scss/footer';
+@import 'scss/about';
+@import 'scss/contact';
+@import 'scss/form';
+@import 'scss/tech';
+@import 'scss/resume';
+
+html body {
+	border:0px;
+	margin: 0px;
+	font-family: 'Open Sans' sans-serif;
+}
+
+h3 {
+	@extend %small-bold;
+	color: $accent;
+	text-align: center;
+}

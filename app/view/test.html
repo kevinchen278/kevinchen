@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <title>Find words in Contest</title>
+</head>
+<body>
+    <div>
+      <p id='content'>
+            Given a page of content with alphanumeric words, and a search phrase of N words, write an algorithm that will return the shortest snippet of content that contains all N words in any order.
+
+            Example: The George Washington Bridge in New York City is one of the oldest bridges ever constructed. It is now being remodeled because the bridge is a landmark. City officials say that the landmark bridge effort will create a lot of new jobs in the city.
+      </p>
+        <p>
+            Search Terms: Landmark City Bridge
+            Result: bridge is a landmark. City          
+        </p>
+        <div id='result'>
+        </div>
+    </div>
+    
+    
+<script>
+    var searchWords, content, findWordPos;
+    
+    searchWords = ['landmark','city','bridge'];
+    content = document.getElementById('content').innerHTML;
+    
+    findWordPos=function(word, searchWords) {
+      for (i=0; i< searchWords.length; i++) {
+         if (searchWords[i].toLocaleLowerCase() === word.toLocaleLowerCase()) {
+                       return (i);
+          }
+        }
+    }
+    
+    findWordsInContent(content,searchWords);
+    document.getElementById('result').innerHTML = findwords.toString();    
+
+    function findWordsInContent(content,searchWords) {
+        var words, N, wordPos;
+
+        words = content.split(" ");
+        N = searchWords.length;
+        wordPos = new Array(N+4,1);
+        
+        for (i=0; i<N+4; i++) wordPos[i]=-1;
+        //WordPos[N] = -1;   //StartPos
+        //WordPos[N+1] = -1;  //EndPos
+        //WordPos[N+2] = -1;  // current distance of the found words. 
+        
+        WordPos[N+3] = 0;   // the number of found words
+        
+        for (i=0; i<M, i++){
+            pos = findWordPos(words[i], searchWords);
+            if  (pos > -1) {
+                   updateWordPos(wordPos,N, pos,i);
+             }
+        }
+
+        //output
+        if (wordPos[N+3]===N) {
+             console.log(“The shortest snippet is as below”);
+             for (i=wordPos[N],i<=wordPos[N+1], i++){
+                       console.log(wordArr[i],‘  ’);
+            }
+        } else { 
+             if (wordPos[N+3]> 0) {
+             console.log(“The closest matched snippet is as below”);
+             for (i=wordPos[N],i<=wordPos[N+1], i++){
+                       console.log(wordArr[i],‘  ’);
+              } else {
+                conolse.log(“not found”);
+              }
+            }
+        }
+    }
+
+    function updateFoundWord(wordPos,N, pos, i){
+        var dist1, dist2;
+        
+        if (wordPos[pos] === -1) {
+            wordPos[pos] = i;
+            wordPos[N+3] += 1;
+           
+            if (wordPos[N] === -1) {
+                wordPos[N] = i;
+            }
+           
+            if (wordPos[N+1] === -1) {
+               wordPos[N+1] = i;
+            }
+        } else {
+            if (wordPos[N+3]===N) {
+                 max=0; min=0;
+                 for (i=1; i<N; i++) {
+                            if (wordPos[i]>wordPos[max]) max = i;
+                            if (wordPos[i]<wordPos[min]) min = i;
+                  }
+                  dist1 =  (wordPos[max] - wordPos[min]);
+
+                  wordPos2 = wordPos;
+                  wordPos2[pos] = i;
+                  max=0; min=0;
+                  for (i=1; i<N; i++) {
+                       if (wordPos2[i]>wordPos2[max]) max = i;
+                       if (wordPos2[i]<wordPos2[min]) min = i;
+                   }
+                  dist2 =  (wordPos[max] - wordPos[min]);
+
+                  if (dist2<dist1)  wordPos[pos] = i;
+            }
+
+            if (wordPos[N] === pos) || (wordPos[N+1] === pos) {
+              //modify the wordPos 
+
+            }
+        }
+        
+    }
+
+</script>
+</body>
+</html>
+
+
+
+

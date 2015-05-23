@@ -1,0 +1,123 @@
+#about {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	// border: 3px solid green;
+	h3 {
+		margin: 0px;
+		padding: 20px 0px 30px 0;
+	}
+
+	.face-lockup{
+		height: 210px;
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(space-around);		
+	}
+
+	[class^='icon-'] {
+		width: 100px;
+		height: 100px;
+		dipslay: inline-block;
+		background: $bgcolor;
+		margin-right: 40px;
+		margin-top: 25px;
+		float: left;
+		border-radius: 50% 50%;
+		border: 3px solid grey;
+	}
+
+	.face-img{
+		width: 200px;
+		height: 200px;
+		display: inline-block;
+		float: left;
+	}
+
+	#myself {
+		clear: both; 
+		text-align: justify;
+		margin: 20px 20px 20px 20px;
+	}
+
+}
+
+
+.skill-lockup {
+	max-width: 700px;
+	margin: 20px auto;
+	color: #999;
+	@include clearfix;
+
+
+.skill-unit{
+		width: 350px;
+		height: 50px;
+		float:left;
+	}
+
+	.skill-icons{
+		font-size: 0;
+		margin: 0px 0 30px;
+		span {
+			display: inline-block;
+			@include size(14px);
+			background-color: $accent;
+			margin-right: 5px;
+			border-radius: 50%;
+
+			&:after {
+				content: '';
+				display: block;
+				@include size(10px);
+				background-color: #fff;
+				border-radius: 50%;
+				margin: 2px;
+			}
+		}
+
+		@for $i from 1 through 10 {
+			&.skill-#{$i} {
+				span:nth-child(n+#{$i+1}){
+					background-color:$bgcolor;
+				}
+		    }
+	    }
+	}
+}
+
+@media screen and (max-width:650px){
+	.face-lockup{
+		display:block;
+		text-align:center;
+
+		[class^='icon-'] {
+			display:none;
+		}
+
+		.face-img {
+			margin: 2% 30%;
+		}
+
+		div {
+			display: inline-block;
+		}
+	}
+   #myself {
+   		font-size: 1em;
+    	padding: 0 30px 10px 30px;
+
+   }
+
+	.skill-lockup {
+		margin-left: 30px;
+		@include clearfix;
+	}
+}
+
+
+
+
+

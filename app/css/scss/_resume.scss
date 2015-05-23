@@ -1,0 +1,81 @@
+#resume{
+	position: relative;
+	height: 500px;
+	margin: 2px 0 2px 0;
+	padding: 0px;
+	#sidebar ul{
+		li a{
+			text-decoration:none;
+		}
+		li a:hover{
+				text-decoration: none;
+		}
+
+	}
+}
+
+
+
+
+#sidebar {
+	background-color: #EEE;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    bottom: 0;
+    left: 0px;
+    width: 200px;
+    overflow: auto;
+}
+
+#skill {
+	table {
+		width: 90%;
+	}
+	table, tr, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+
+	table tr:nth-child(even){
+		background-color:#eee;
+	}
+
+	// table tr:nth-child(odd)({
+	// 	background-color:#ddd;
+	// 	})
+
+
+}
+
+#content {
+    position: absolute;
+    background-color: #FFF;
+    height: auto;
+    top: 0px;
+    bottom:0px;
+    left: 210px /* 200 + 6*/;
+    overflow: auto; 
+    padding-left:30px;
+    text-align: justify;
+}
+
+#sidebar-resizer {
+	position: absolute;
+	background-color: #BBB;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left:200px;
+    width: 10px;
+    cursor: e-resize;
+}
+
+#sidebar-resizer:hover {
+	background-color: #AAA;
+}
+
+
+
+
