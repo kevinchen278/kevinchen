@@ -1,2 +1,2 @@
 # kevinchen
-kevin chen's website
+Simple Examples of using AngularJs, jQuery, JavaScript. 
