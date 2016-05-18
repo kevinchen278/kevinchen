@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+function enter() {
+
+    if (navigator.GetUserMedia) { 
+       navigator.myGetMedia=navigator.GetUserMedia;
+       navigator.myGetMedia({video: true}, connect, error); 
+    } 
+    else {
+       alert("NO");
+    }
+
+    function connect(stream) {
+
+        var video = document.getElementById("my_video");
+            video.src = window.URL ? window.URL.createObjectURL(stream) : stream;
+            video.play();
+
+        var canvas = document.getElementById("c"); 
+    }
+
+    function error(e) { console.log(e); }
+
+}
+
+</script>
+
+</head>    
+<body>
+    <canvas width="640" height="480" id="c"></canvas>
+    <input type="button" value="RECORD" onClick="enter()"/>
+    <input type="button" value="SAVE" />
+    <video id="my_video" width="640" height="480"/>
+</body>
+</html>

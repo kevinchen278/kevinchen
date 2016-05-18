@@ -19,6 +19,7 @@
 
 #sidebar {
 	background-color: #EEE;
+	height: 500px;
     position: absolute;
     margin: 0px;
     padding: 0px;
@@ -46,7 +47,6 @@
 	// 	background-color:#ddd;
 	// 	})
 
-
 }
 
 #content {
@@ -62,8 +62,7 @@
 }
 
 #sidebar-resizer {
-	position: absolute;
-	background-color: #BBB;
+	background-color: #ccc;
     position: absolute;
     top: 0px;
     bottom: 0;

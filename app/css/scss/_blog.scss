@@ -1,0 +1,47 @@
+#blog {
+	position: relative;
+	height: 500px;
+	margin: 2px 0 2px 0;
+	padding: 0px;
+	aside {
+		font-size: 1.1em;
+		width: 350px;
+		background-color: #FEFFFC;
+		ul {
+			list-style-type: none;
+		}
+		li a{
+			text-decoration:none;
+		}
+		li a:hover{
+				text-decoration: none;
+				color: red;
+		}
+	}
+}
+
+#slide {
+	width: 200px; 
+	height: 200px;
+	margin: 0 auto; 
+	background: #000; 
+	color: #fff;
+	border-radius: 50% 50%;
+}
+
+#blog #sidebar-resizer{
+	left:350px;
+}
+
+#blog #content{
+	left: 360px;
+	ul {
+		margin: 0px;
+		li {
+			margin: 0px;
+		}
+		li h4 {
+			margin: 0px;
+		}
+	}
+}

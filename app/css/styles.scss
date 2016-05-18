@@ -1,6 +1,7 @@
 $fa-font-path: "fonts/font-awesome/";
 
 @import 'scss/font';
+@import 'bootstrap/bootstrap';
 @import 'bourbon/app/assets/stylesheets/bourbon';
 @import 'font-awesome';
 @import 'scss/variables';
@@ -10,8 +11,10 @@ $fa-font-path: "fonts/font-awesome/";
 @import 'scss/about';
 @import 'scss/contact';
 @import 'scss/form';
-@import 'scss/tech';
+@import 'scss/blog';
 @import 'scss/resume';
+@import 'scss/vc';
+
 
 html body {
 	border:0px;

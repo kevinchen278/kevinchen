@@ -1,0 +1,50 @@
+<section id="blog" ng-controller="blogCtrl" ng-model="oneAtATime">
+
+	<aside id='sidebar'>
+        <h3>Techs</h3>
+
+        <div id="leftnav">
+		    <ul>
+	            <li><a href="" ng-click="isCollapsed=!isCollapsed"> Articles</a></li>
+	            <ul collapse="isCollapsed">
+		            <li><a>Tutorials</a></li>
+		            <li><a> Examples</a></li>
+		        </ul>
+		    </ul>
+
+			<ul>
+	            <li><a href="" ng-click="isCollapsed2=!isCollapsed2"> Tags</a></li>
+	            <ul collapse="isCollapsed2">
+					<li><a>AngularJS</a></li>
+					<li><a>jQueyr</a></li>
+					<li><a>CSS/SASS</a></li>
+					<li><a>Grunt/Gult</a></li>
+					<li><a>Unit Test</a></li>
+					<li><a>Front End</a></li>
+					<li><a>Back End</a></li>
+				</ul>            
+			</ul>
+        </div>
+
+      </aside>
+
+  	<section id="content">
+
+  	   fdsa;fjkdsajkg;a
+  	   fdsakf;gdfagjd;lsagkj
+  	   fjdsakl;fklsdajfk
+
+	</section>
+
+
+    <div id="sidebar-resizer" 
+      resizer="vertical" 
+      resizer-width="6" 
+      resizer-left="#sidebar" 
+      resizer-right="#content"
+      resizer-max="400"
+      resizer-min="200">
+    </div>
+
+
+</section>

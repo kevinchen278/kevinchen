@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js">/></script>
+  </head>
+<body ng-app='myApp'>
+
+<my-div first-name="abc" last-name="def" add="addFun()"><h1>ssss</h1></my-div>
+
+<div  ng-controller="userCtrl">
+
+  <user-info  user="zhang"></user-info>
+  <user-info  user="xi"></user-info>
+
+</div>
+
+
+<script>
+
+myApp = angular.module('myApp',[]);
+myApp.directive("myDiv",function(){ 
+    return {
+      restrict:"E",
+      transclude:true,
+      template:"<div><h1'>{{title}}</h1><br><input type='button' ng-click='addFun()' value='Add button'></div>"+
+                "<ul ng-repeat='item in items'><li>{{item}}</li></ul>",
+      scope: {
+        firstName:'@',
+        lastName:'@',
+        title:'@',
+        addFun: '@'
+      },
+
+      link: function($scope,element,attrs){
+        element.on('mouseenter',function(){
+          element.css('background-color','red');
+        });
+     },
+
+     controller: ['$scope',function($scope){
+          $scope.title="my title";
+          $scope.items=['ab','ccc','dddd'];
+          $scope.addFun=function(element,attrs){
+
+            $scope.items[$scope.items.length]=$scope.items.length;
+          }
+
+     }]
+    }
+});
+
+myApp.controller('userCtrl', ['$scope', function($scope){
+      $scope.zhang = {name:"kevin",address: "aaaaaaa", phone: "35654265"};
+      $scope.xi = {name:"chen", address: "bbbbbbbbbb", phone: "35354354325"};  
+}]);
+
+myApp.directive('userInfo',function(){
+
+  return {
+    restrict: 'E',
+    template: '<div><h1>{{user.name}}</h1></div>'+
+              '<div>Address: {{user.address}} </div>'+
+              '<div>Phone: {{user.phone}}</div>',
+    scope: {
+      user: '='
+    }
+    // },
+
+    // controller: ['$scope',function($scope){
+    //   $scope.zhang = {name: 'kevin', address: "aaaaaaa", phone: "35654265"};
+    //   $scope.xi = {name:'chen', address: "bbbbbbbbbb", phone: "35354354325"};
+
+    // }]
+      
+
+  }
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>

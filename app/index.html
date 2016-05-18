@@ -2,7 +2,8 @@
 <html lang="en-US">
 <head>
     <meta charset='utf-8'>
-    <title>Kevin Chen's Page</title>
+    <title>Licong Chen's Page</title>
+    <base href="/~lcchen/">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -18,6 +19,8 @@
 <script src="vendor/jquery.min.js"></script> 
 <script src="vendor/angular.min.js"></script>
 <script src="vendor/angular-route.min.js"></script>
+<script src="vendor/ui-bootstrap.min.js"></script>
+<script src="vendor/ui-bootstrap-tpls.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/services/Services.js"></script>
 <script type="text/javascript" src="js/controllers/controllers.js"></script>
@@ -25,3 +28,18 @@
     
 </body>
 </html>
+
+<!-- <h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
+
+<hr/>
+<div id="ip"></div>
+<div id="address"></div>
+<hr/>Full response: <pre id="details"></pre>
+
+
+
+$.get("http://ipinfo.io", function (response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("Location: " + response.city + ", " + response.region);
+    $("#details").html(JSON.stringify(response, null, 4));
+}, "jsonp"); -->

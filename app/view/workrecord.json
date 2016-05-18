@@ -1,0 +1,27 @@
+[
+    {"id":"w1", 
+     "beginDate":"9-29-2014",
+     "endDate": "2015-3-31",
+     "techs":"HTML, CSS, JavaScript, AngularJS,  jQuery, DOM, JSON, AJAX, Sass, Bootstrap,  Compass, Karma, Jasmine, Protractor, NPM, Bower, Grunt, GULP"},
+    {"id":"w2", 
+     "beginDate":"2014-6-10",
+     "endDate": "2014-8-31",
+     "techs":"HTML, CSS, JavaScript, AngularJS,  jQuery, DOM, JSON, AJAX, Sass, Bootstrap,  Grunt"},
+    {"id":"w3", 
+     "beginDate":"2013-10-7",
+     "endDate": "2014-5-31",
+     "techs":"HTML, CSS, JavaScript, AngularJS,  jQuery, DOM, JSON, AJAX, Sass, Bootstrap,  Grunt"},
+    {"id":"w4", 
+     "beginDate":"2012-5-1",
+     "endDate": "2013-7-25",
+     "techs":"HTML, CSS, JavaScript,  jQuery, DOM, JSON, AJAX, Sass, Bootstrap, Bower,Grunt"},
+    {"id":"w5", 
+     "beginDate":"2010-2-10",
+     "endDate": "2011-8-31",
+     "techs":"HTML, CSS, JavaScript,  jQuery, DOM, JSON, AJAX"},
+    {"id":"w6", 
+     "beginDate":"2007-11-1",
+     "endDate": "2010-1-20",
+     "techs":"Java, Spring, Hibernate, Maven, EJB, Grandle"}
+]
+

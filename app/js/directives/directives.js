@@ -1,5 +1,7 @@
 'use strict';
 
+//http://codepen.io/jonashartmann/pen/kBqmj
+
 kevinApp.directive('scrollTo', function ($location, $anchorScroll) {
     return function(scope, element, attrs) {
     element.bind('click', function(event) {
@@ -10,8 +12,13 @@ kevinApp.directive('scrollTo', function ($location, $anchorScroll) {
             var location = attrs.scrollTo;
             $location.hash(location);
 
-            console.log(location);
-            console.log(scrollTo);
+            console.log($location);
+
+            if (attrs.href !== '') {
+               $location.path(attrs.href);
+               $location.replace();
+            }
+
             $anchorScroll();
         });
     };
@@ -37,6 +44,11 @@ kevinApp.directive('resizer', function($document) {
                 if ($attrs.resizerMax && x > $attrs.resizerMax) {
                     x = parseInt($attrs.resizerMax);
                 }
+
+                if ($attrs.resizerMin && x < $attrs.resizerMin) {
+                    x = parseInt($attrs.resizerMin);
+                }
+
 
                 $element.css({
                     left: x + 'px'

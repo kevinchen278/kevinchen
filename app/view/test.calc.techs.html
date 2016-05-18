@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>work expericents</title>
+
+    <link rel="stylesheet" type="text/css" href="ng-grid.css" />
+
+	<style type="text/css">
+		.gridStyle {
+		    border: 1px solid rgb(212,212,212);
+		    width: 500px; 
+		    height: 400px
+		}
+	</style>
+</head>
+
+
+
+<body ng-controller="MyCtrl">
+
+
+<div class="gridStyle" ng-grid="gridOptions"></div>
+
+
+<div>
+
+    <p>Input previous work experiences</p>
+
+    <form name="myWork" ng-controller="myCtrl">
+
+	    <p work-rec rec="info[0]"></work-rec></p>
+	    <p work-rec rec="info[1]"></work-rec></p>
+	    <p work-rec rec="info[2]"></work-rec></p>
+	
+	    <div id='space-for-work-rec'></div>
+	    <button add-rec>Add</button>
+	 	<input type="button" ng-show="true" id="reset" value="Reset"  ng-click="loadRecords()">
+	 	<input type="button" ng-show="true" id="calc" value="Calculate"  ng-click="myCalc()">
+    </form>
+
+</div>
+
+
+
+
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="ng-grid.js"></script>
+
+
+<script src="test.calc.js"></script>
+
+<script type="text/javascript">
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!--     <p>
+		<label>From
+	 	<input type="date" id="fromDate-1" ng-model="info[0].beginDate" min="1/1/1930" max="Date()" ng-required="true"> 
+	 	To 
+	 	<input type="date" id="toDate-1" ng-model="info[0].endDate" min="1/1/1930" max="Date()" ng-required="true">
+	 	Techs:<input type="text" id="techs1" ng-model="info[0].techs" ng-required="true">
+	 	<input type="button" ng-show="true" id="add" value="Add"  ng-click="myAdd()">
+	 	</label>
+	</p>
+ -->

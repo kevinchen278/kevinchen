@@ -2,3 +2,4 @@ bower_components/
 node_modules/
 my.sh
 app/css/bourbon/
+build/

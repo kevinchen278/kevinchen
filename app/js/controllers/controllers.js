@@ -8,6 +8,20 @@ kevinApp.controller('InfoCtrl', ['ResumeService','$scope', function(ResumeServic
 }]);
 
 kevinApp.controller('resumeCtrl', function(){
-  		return {};
+  		
   	
-})
+});
+
+kevinApp.controller('footerCtrl', ['$scope', '$rootScope', '$routeParams', function($scope,$rootScope, $routeParams){
+	// var slug = $routeParams.id;
+	// $scope.$emit('routeLoaded',{slug:slug});
+
+}]);
+
+kevinApp.controller('blogCtrl', function ($scope) {
+  $scope.oneAtATime = false;
+  $scope.isCollapsed = false;
+
+});
+
+

@@ -16,6 +16,7 @@ var htmlmin = require('gulp-htmlmin');
 var browserSync	= require('browser-sync');
 var angularTemplates = require('gulp-angular-templates');
 var gulpCopy 			= require('gulp-copy');
+var runSequence = require('run-sequence');
 
 
 /* tasks */
@@ -118,7 +119,7 @@ gulp.task('minify', function() {
 gulp.task('html', function () {
     return gulp.src('app/view/**/*.html')
         .pipe(angularTemplates({module:'kevinApp'}))
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./build/html'));
 });
 
 gulp.task('copyfile',function(){

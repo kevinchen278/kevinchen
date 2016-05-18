@@ -1,7 +1,7 @@
 header {
 	padding: 0px;
 	margin: 0px;
-	height:210px;
+	height:120px;
 	background: #ccc url($bgImageUrl);
 	background-size: 100% 100%;
 	background-origin: content-box;
@@ -11,6 +11,8 @@ header {
 		margin-top: 10px;
 		margin-left: 20px;
 		float:left;
+		width: 80px;
+		height: 50px;
 	}
 
 	nav {
@@ -34,9 +36,9 @@ header {
 
 	h1  {
 		clear:both;
-		padding-top: 10px;
+		padding-top: 0px;
 		text-align: center;
-		font-size: 28px;
+		font-size: 20px;
 		font-weight: 800;
 		color: white;
 		text-transform: uppercase;
@@ -45,7 +47,7 @@ header {
 		span {
 			display: inline-block;
 			padding: 0.3em 0.4em;
-			border: white solid 5px;
+			border: white solid 0px;
 		}
 	}
 

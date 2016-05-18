@@ -1,0 +1,29 @@
+#vc {
+
+	position: relative;
+	height: 480px;
+	margin: 2px 30px 2px 40px;
+	padding: 10px;
+	font-size: 1.2em;
+	background-color: #FEFCFC;
+
+	h1 {
+		font-size: 1.8em;
+	}
+
+	h5 {
+		text-align: center;
+	}
+
+	li ul {
+
+		list-style-type: none;
+	}
+	li a{
+		text-decoration:none;
+	}
+	li a:hover{
+			text-decoration: none;
+			color: red;
+	}
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1> Calucalate </h1>
+<form >
+<label>Text:</label>
+<input type="date" value='2015-12-31'>
+<input type="date" value='2015-10-06'>
+<input type="button" onclick="calculate()" value="Button 10"/>
+</form>
+
+<p id="output">ddd</p>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var getDays = function(year,month){
+		var days = 0;
+
+		month = month+1;
+
+		switch (month) {
+			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+				days = 31;
+				break;
+			case 4: case 6: case 9: case 11:
+				days = 30;
+				break
+			case 2:
+			    if ((year % 400)===0||((year % 100 != 0) && (year % 4 ===0))) 
+			    	days = 29;
+			    else
+			    	days =28;
+
+			    break;
+			default:
+			    days=0;
+		}
+
+		return days;
+	};
+
+
+
+	var diffTwoDate=function(bgDate,endDate){
+		var months, days;
+
+
+		months = (endDate.getFullYear()-bgDate.getFullYear())*12 + endDate.getMonth() - bgDate.getMonth();
+		days = endDate.getDate() - bgDate.getDate();
+
+		if (days < 0) {
+			days = endDate.getDate() + getDays(endDate.getFullYear(),(endDate.getMonth()+11) % 12) - bgDate.getDate();
+			months--;
+		}
+
+		months = months + days/getDays(endDate.getFullYear(),endDate.getMonth());
+
+		return months;
+	};
+	
+
+	function calculate(){
+		document.getElementById('output').innerHTML='fff';
+
+	}
+
+
+
+</script>
+
+</body>
+</html>
